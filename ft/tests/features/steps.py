@@ -21,4 +21,8 @@ def entonces_puedo_ver_el_mensaje_group1(step, mensaje):
     esperado = world.driver.find_element_by_id('user-tools').text
     assert mensaje in esperado, esperado + 'es diferente a '+mensaje
 
+@step(u'Entonces puedo ver el mensaje de error "([^"]*)"')
+def entonces_puedo_ver_el_mensaje_de_error_group1(step, mensaje):
+    esperado = world.driver.find_element_by_class_name('errornote').text
+    assert mensaje in esperado, esperado + 'es diferente a '+mensaje
     

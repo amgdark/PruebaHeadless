@@ -2,3 +2,4 @@ django
 selenium
 lettuce
 mysqlclient
+python-Levenshtein
