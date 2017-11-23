@@ -1,7 +1,6 @@
 from django.test import TestCase
 
 
-
 class TestUsuario(TestCase):
 	def test_suma(self):
 		import time
