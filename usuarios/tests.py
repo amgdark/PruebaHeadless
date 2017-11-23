@@ -1,3 +1,8 @@
 from django.test import TestCase
 
-# Create your tests here.
+
+
+class TestHeadLess(TestCase):
+
+	def test_suma(self):
+		self.assertEquals( 1 + 1, 2)
