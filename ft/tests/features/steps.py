@@ -6,7 +6,11 @@ from selenium import webdriver
 def dado_que_ingreso_la_url_group1(step, url):
     # chromedriver = '/Users/alexmau/Documents/PruebaHeadless/lib/chromedriver'
     world.driver = webdriver.Chrome('chromedriver')
-    world.driver.get(url)
+    import os
+
+	
+    puerto = os.environ['PUERTO']
+    world.driver.get('http://localhost:'+puerto+'/admin')
 @step(u'Y en las cajas de texto el usuario "([^"]*)" y la contraseña "([^"]*)"')
 def y_en_las_cajas_de_texto_el_usuario_group1_y_la_contrasena_group2(step, usuario, password):
     world.driver.find_element_by_name("username").send_keys(usuario)
@@ -25,4 +29,10 @@ def entonces_puedo_ver_el_mensaje_group1(step, mensaje):
 def entonces_puedo_ver_el_mensaje_de_error_group1(step, mensaje):
     esperado = world.driver.find_element_by_class_name('errornote').text
     assert mensaje in esperado, esperado + 'es diferente a '+mensaje
+    finalizar_driver()
+
+
+def finalizar_driver():
+    world.driver.get("http://localhost:8001/admin/logout/")
+    world.driver.quit()
     

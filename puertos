@@ -3,6 +3,7 @@
 PUERTO=8000
 if [ $(ls puertos | wc -l) -gt 0 ];then
         PUERTO=$(($(ls puertos -r | head -n 1)+1))
+        touch PUERTO
 fi
 export PUERTO
 
