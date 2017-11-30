@@ -9,7 +9,7 @@ def dado_que_ingreso_la_url_group1(step, url):
     import os
 
 	
-    puerto = os.environ['PUERTO']
+    puerto = os.environ['MI_PUERTO']
     world.driver.get('http://localhost:'+puerto+'/admin')
 @step(u'Y en las cajas de texto el usuario "([^"]*)" y la contraseña "([^"]*)"')
 def y_en_las_cajas_de_texto_el_usuario_group1_y_la_contrasena_group2(step, usuario, password):
