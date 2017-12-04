@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Usuario</title>
+</head>
+<body>
+	<h1>Usuario datos personales y laborales</h1>
+
+	<form method="POST">
+		{% csrf_token %}
+		{{ form_per.as_p }}
+		{{ form_lab.as_p }}
+		<button type="submit">Guardar</button>
+	</form>
+</body>
+</html>
