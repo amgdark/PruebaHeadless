@@ -6,7 +6,6 @@ class DatosPersonales(models.Model):
 	direccion = models.CharField(u'Dirección',max_length=100)
 	colonia = models.CharField(u"Colonia", max_length=50)
 	
-	
 	def __str__(self):
 		return self.nombre
 		
@@ -15,4 +14,10 @@ class DatosLaborales(models.Model):
 	salario = models.DecimalField(u'Salario',decimal_places=2, max_digits=4)
 	
 	def __str__(self):
-		return self.nombre
+		return self.puesto
+
+class DatosOtros(models.Model):
+	otro = models.CharField('Otro',max_length=100)
+	
+	def __str__(self):
+		return self.otro
