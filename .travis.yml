@@ -12,6 +12,7 @@ before_script:
   
 
 script: 
+  - chmod +x lib/lib/*
   - export PATH=$PATH:lib/lib/
   - virtualenv entornito
   - . entornito/bin/activate
