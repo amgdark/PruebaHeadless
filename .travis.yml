@@ -5,7 +5,7 @@ python:
 
 install: 
   - sudo apt-get install xvfb
-  - sudo dpkg -i google-chrome-stable_current_amd64.deb
+  - sudo dpkg -i lib/lib/google-chrome-stable_current_amd64.deb
   - sudo apt-get install -f
   - pip install -r requirements.txt
 
