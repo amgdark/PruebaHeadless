@@ -31,6 +31,7 @@ script:
   - export DISPLAY=:0
   - export MI_PUERTO=8000
   - python manage.py migrate
+  - echo "from django.contrib.auth.models import User; User.objects.create_superuser('alex', 'alex@example.com', 'alexcontra')" | python manage.py shell
   - python manage.py runserver 127.0.0.1:$MI_PUERTO &
   - lettuce ft/tests
 
