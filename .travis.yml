@@ -13,7 +13,8 @@ before_script:
 
 script: 
   - chmod +x lib/lib/*
-  - export PATH=$PATH:lib/lib/
+  - export PATH=$PATH:$(pwd)/lib/lib/
+  - echo $PATH
   - virtualenv entornito
   - . entornito/bin/activate
   - pip install -r requirements.txt
