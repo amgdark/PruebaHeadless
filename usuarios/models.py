@@ -1,9 +1,10 @@
+
 from django.db import models
 
 class DatosPersonales(models.Model):
 	nombre = models.CharField('Nombre',max_length=200)
-	telefono = models.CharField(u'Teléfono',max_length=13)
-	direccion = models.CharField(u'Dirección',max_length=100)
+	telefono = models.CharField(u'Telefono',max_length=13)
+	direccion = models.CharField(u'Direccion',max_length=100)
 	colonia = models.CharField(u"Colonia", max_length=50)
 	
 	def __str__(self):
