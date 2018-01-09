@@ -1,0 +1,27 @@
+language: python
+python:
+  - "2.7"
+  
+
+install: 
+  - sudo apt-get install xvfb
+  - sudo dpkg -i google-chrome-stable_current_amd64.deb
+  - sudo apt-get install -f
+  - pip install -r requirements.txt
+
+before_script: 
+  
+
+script: 
+  - export PATH=$PATH:lib/lib/
+  - virtualenv entornito
+  - . entornito/bin/activate
+  - Xvfb :0 >& /dev/null &
+  - export DISPLAY=:0
+  - export MI_PUERTO=8000
+  - python manage.py runserver 127.0.0.1:$MI_PUERTO &
+  - lettuce ft/tests
+
+notifications:
+email: false
+
