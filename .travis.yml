@@ -30,6 +30,7 @@ script:
   - Xvfb :0 >& /dev/null &
   - export DISPLAY=:0
   - export MI_PUERTO=8000
+  - python manage.py migrate
   - python manage.py runserver 127.0.0.1:$MI_PUERTO &
   - lettuce ft/tests
 
