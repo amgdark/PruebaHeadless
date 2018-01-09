@@ -4,8 +4,10 @@ from selenium import webdriver
 
 @step(u'Dado que ingreso la url "([^"]*)"')
 def dado_que_ingreso_la_url_group1(step, url):
-    # chromedriver = '/Users/alexmau/Documents/PruebaHeadless/lib/chromedriver'
-    world.driver = webdriver.Chrome('chromedriver')
+    chromedriver = '/Users/alexmau/Documents/PruebaHeadless/lib/chromedriver'
+    chromedriver = '/home/travis/build/amgdark/PruebaHeadless/lib/lib/chromedriver'
+
+    world.driver = webdriver.Chrome(chromedriver)
     import os
 
 	
