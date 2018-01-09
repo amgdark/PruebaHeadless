@@ -20,10 +20,10 @@ before_script:
   
 
 script: 
-  - chmod +x lib/lib/*
-  - ls -la lib/lib/*
-  - export PATH=$PATH:$(pwd)/lib/lib
-  - echo $PATH
+  - # chmod +x lib/lib/*
+  - # ls -la lib/lib/*
+  - # export PATH=$PATH:$(pwd)/lib/lib
+  - # echo $PATH
   - virtualenv entornito
   - . entornito/bin/activate
   - pip install -r requirements.txt
