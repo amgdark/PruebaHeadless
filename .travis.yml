@@ -7,7 +7,6 @@ install:
   - sudo apt-get install xvfb
   - sudo dpkg -i lib/lib/google-chrome-stable_current_amd64.deb
   - sudo apt-get install -f
-  - pip install -r requirements.txt
 
 before_script: 
   
@@ -16,6 +15,7 @@ script:
   - export PATH=$PATH:lib/lib/
   - virtualenv entornito
   - . entornito/bin/activate
+  - pip install -r requirements.txt
   - Xvfb :0 >& /dev/null &
   - export DISPLAY=:0
   - export MI_PUERTO=8000
