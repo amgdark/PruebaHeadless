@@ -1,5 +1,5 @@
 virtualenv
-django
+django==1.11
 selenium
 lettuce
 mysqlclient
